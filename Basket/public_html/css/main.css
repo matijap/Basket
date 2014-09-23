@@ -1,0 +1,98 @@
+body {
+/*    background: #4c4c4c;  Old browsers 
+background: -moz-linear-gradient(left,  #4c4c4c 0%, #131313 21%, #131313 80%, #4c4c4c 100%);  FF3.6+ 
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#4c4c4c), color-stop(21%,#131313), color-stop(80%,#131313), color-stop(100%,#4c4c4c));  Chrome,Safari4+ 
+background: -webkit-linear-gradient(left,  #4c4c4c 0%,#131313 21%,#131313 80%,#4c4c4c 100%);  Chrome10+,Safari5.1+ 
+background: -o-linear-gradient(left,  #4c4c4c 0%,#131313 21%,#131313 80%,#4c4c4c 100%);  Opera 11.10+ 
+background: -ms-linear-gradient(left,  #4c4c4c 0%,#131313 21%,#131313 80%,#4c4c4c 100%);  IE10+ 
+background: linear-gradient(to right,  #4c4c4c 0%,#131313 21%,#131313 80%,#4c4c4c 100%);  W3C 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#4c4c4c',GradientType=1 );  IE6-9 */
+background-image: url(../images/background.jpg)
+
+    
+}
+#content {
+    width: 1196px;
+    margin: 0 auto;
+}
+header {
+    height: 50px;
+}
+#s2id_continent {
+    width: 200px;
+}
+/* COLORS START */
+.white-color {
+    color: white;
+}
+/* COLORS END */
+/* PADDING START */
+.p-none {
+    padding: 0;
+}
+.p-t-none {
+    padding: 0;
+}
+.p-r-none {
+    padding: 0;
+}
+.p-b-none {
+    padding: 0;
+}
+.p-l-none {
+    padding: 0;
+}
+/* PADDING END */
+/* LOGIN PAGE START */
+.logo-login img {
+    width: 100%;
+    border-bottom-right-radius: 5%;
+    border-top-right-radius: 5%;
+    height: 270px;
+}
+.login-row {
+    margin-top: 160px;
+}
+.login-form-holder {
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%;
+    background-color: #000099;
+    background-color: #fff;
+    height: 270px;
+}
+/* LOGIN PAGE END */
+/* WIDTH AND HEIGHT START*/
+.width-100-percent {
+    width: 100%;
+}
+/* WIDTH AND HEIGHT END*/
+/* PARSLEY START */
+.parsley-errors-list {
+    color: red;
+    padding-top: 5px !important;
+}
+/* PARSLEY END*/
+
+@media (max-width: 1196px) {
+    #content {
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 40px;
+    }
+    /* LOGIN PAGE START */
+    .login-row {
+        margin-top: 60px;
+    }
+    /* LOGIN PAGE END */
+}
+@media (max-width: 480px) {
+    #content {
+        padding: 25px;
+    }
+    /* LOGIN PAGE START */
+    .login-row {
+        margin-top: 30px;
+    }
+    /* LOGIN PAGE END */
+}

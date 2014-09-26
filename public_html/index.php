@@ -1,7 +1,6 @@
 <?php   
       //Including configuration php file, with all defined variables
       include("config.php");
-       error_log('radi');
       // Adding library directory to the include path
         /**
          * @todo all this can be done in the config file

@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Basket_Controller_Action
+class Basket_IndexController extends Basket_Controller_Action
 {
     
     public function indexAction()
@@ -8,8 +8,8 @@ class IndexController extends Basket_Controller_Action
 //        $continent = Core::createNewObject('Continent');
 //        $continent->name = 'new';
 //        $continent->save();
-        $c = Core::getBasicSelect()->from('continent')->where('name = ?', 'new')->query()->fetch();
-        fb($c);
+//        $c = Core::getBasicSelect()->from('continent')->where('name = ?', 'new')->query()->fetch();
+//        fb($c);
         
     }
 }

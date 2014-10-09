@@ -43,24 +43,46 @@ header {
     padding: 0;
 }
 /* PADDING END */
-/* LOGIN PAGE START */
-.logo-login img {
-    width: 100%;
-    border-bottom-right-radius: 5%;
-    border-top-right-radius: 5%;
-    height: 270px;
+/* MARGINS START */
+.m-t-20 {
+    margin-top: 20px;
 }
+.m-t-n-30 {
+    margin-top: -30px;
+}
+/* MARGINS END */
+/* LOGIN PAGE START */
 .login-row {
     margin-top: 160px;
 }
 .login-form-holder {
-    border-bottom-left-radius: 5%;
-    border-top-left-radius: 5%;
+    border-radius: 3%;
     background-color: #000099;
     background-color: #fff;
     height: 270px;
+    float: none;
+    margin: 0 auto;
+    height: 320px;
+    padding-top: 10px;
+    font-size: 13px;
+}
+.login-register-link {
+    float: right;
+    width: 200px;
+    text-align: right;
+}
+.zend-error-style {
+    color: red;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 10px;
 }
 /* LOGIN PAGE END */
+/* REGISTER PAGE START */
+.register-form {
+    height: 400px;
+}
+/* REGISTER PAGE END */
 /* WIDTH AND HEIGHT START*/
 .width-100-percent {
     width: 100%;

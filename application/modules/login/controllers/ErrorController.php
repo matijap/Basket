@@ -1,6 +1,6 @@
 <?php
 
-class ErrorController extends Basket_Controller_Action
+class ErrorController extends Zend_Controller_Action
 {
     public function errorAction()
     {
@@ -25,7 +25,7 @@ class ErrorController extends Basket_Controller_Action
         $this->view->exception = $errors->exception;
         $this->view->request   = $errors->request;
         echo '<pre>';
-        //var_dump($errors->exception['message']);
+        var_dump($errors->exception->getMessage());
         die();
     }
 }

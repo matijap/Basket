@@ -53,14 +53,14 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     protected function _initAcl()
     {
         require_once 'Basket/Acl.php'; 
-   //     $cache = Zend_Registry::get('cache');
+//        $cache = Zend_Registry::get('cache');
 //        if(!$cache->test(Platforma_Acl::PLATFORMA_ACL_CACHE_KEY)) {
 //            $acl = new Platforma_Acl();
 //            $cache->save($acl, Platforma_Acl::PLATFORMA_ACL_CACHE_KEY);
 //        } else {
 //            $acl = $cache->load(Platforma_Acl::PLATFORMA_ACL_CACHE_KEY);
 //        }
-        
+//       
         $acl = new Basket_Acl();
         Zend_Registry::set('acl', $acl);
     }

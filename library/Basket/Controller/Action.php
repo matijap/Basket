@@ -5,10 +5,16 @@ class Basket_Controller_Action extends Zend_Controller_Action {
        //$this->translate = Zend_Registry::getInstance()->Zend_Translate;
        //$translate = $this->translate;
 
+//        if (!Zend_Auth::getInstance()->hasIdentity()) {
+//            return $this->_redirect('/login/login/index');
+//        } else {
+//           $identity = Zend_Auth::getInstance()->getIdentity();
+//        }
         if (!Zend_Auth::getInstance()->hasIdentity()) {
-            return $this->_redirect('/login/login/index');
+            fb('nema login');
+            return $this->_redirect('/login/login');
         } else {
-           $identity = Zend_Auth::getInstance()->getIdentity();
+            fb('ima login');
         }
     }
 }

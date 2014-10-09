@@ -1,58 +1,48 @@
 <?xml version="1.0"?>
 <config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
-	<production>
-       	<includePaths>
-        	<library>
-        	   <zf:const zf:name="APPLICATION_PATH"/>../library
-        	</library>
+    <production>
+        <includePaths>
+            <library>
+            <zf:const zf:name="APPLICATION_PATH"/>../library
+            </library>
         </includePaths>
         <bootstrap>
-        	<path><zf:const zf:name="APPLICATION_PATH"/>/modules/Bootstrap.php</path>
-        	<class value="Bootstrap"/>
-        </bootstrap>    
+            <path><zf:const zf:name="APPLICATION_PATH"/>/modules/Bootstrap.php</path>
+            <class value="Bootstrap"/>
+        </bootstrap>
         <appnamespace value="Application"/>
-        <version value="5.23.18.1"/>
-        <applicationName value="Platforma"/>
-        <applicationUser value="platforma"/>
-        <applicationPass value="d83084832110dc26c44501a670d2436f"/>
-
-        <licenseKey value="f48c54e2af15550bc5ef2ea73b52670cb629312c"/>
-        <clientID value=""/>
-        <clientSecret value=""/>
-        <resources>       
+        <resources>
             <db>
-              <adapter>PDO_MYSQL</adapter>
-              <params>
+                <adapter>PDO_MYSQL</adapter>
+                <params>
                 <host>localhost</host>
                 <dbname>basket</dbname>
                 <username>root</username>
                 <password></password>
                 <adapterNamespace>Zend_Db_Adapter</adapterNamespace>
-              </params>
-              <isDefaultTableAdapter>true</isDefaultTableAdapter>
-            </db>            
+                </params>
+                <isDefaultTableAdapter>true</isDefaultTableAdapter>
+            </db>
             <view value=""/>
             <frontController>
-            	<moduleDirectory><zf:const zf:name="APPLICATION_PATH"/>/modules</moduleDirectory>
-            	<defaultModule>basket</defaultModule>            	
-            	<params>
-            		<displayExceptions value="0"/>
-            	</params>
+                <moduleDirectory><zf:const zf:name="APPLICATION_PATH"/>/modules</moduleDirectory>
+                <defaultModule>login</defaultModule>
+                <params>
+                <displayExceptions value="0"/>
+                </params>
             </frontController>
             <layout>
-            	<layoutPath><zf:const zf:name="APPLICATION_PATH"/>/layouts/scripts</layoutPath>
+                <layoutPath><zf:const zf:name="APPLICATION_PATH"/>/layouts/scripts</layoutPath>
             </layout>
-        </resources>            
+        </resources>
     </production>
-    <staging zf:extends="production">
-    </staging>
+    <staging zf:extends="production"></staging>
     <testing zf:extends="production">
-    	<phpSettings>
-        	<display_startup_errors value="1"/>
-        	<display_errors value="1"/>
+        <phpSettings>
+            <display_startup_errors value="1"/>
+            <display_errors value="1"/>
         </phpSettings>
-        <resources>            
-       </resources>
+        <resources></resources>
     </testing>
     <development zf:extends="production">
         <phpSettings>
@@ -60,6 +50,4 @@
             <display_errors value="1"/>
         </phpSettings>
     </development>
-    <modules>
-    <modul><name/><version>0.0.0.0</version></modul></modules>
 </config>

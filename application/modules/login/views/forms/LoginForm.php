@@ -16,35 +16,36 @@ class LoginForm extends Zend_Form
     {
         $this->setAction(APP_URL . '/login/login/');
         $this->setAttrib('id', 'login-form');
+        $this->setOptions(array('class' => 'm-t-20'));
         
         $this->clearDecorators()->setDecorators(array('FormElements', 'Form'));
         
         $email = $this->createElement('text', 'email', array(
-            'label' => 'Email',
-            'class' => 'form-control',
+            'label'                 => 'Email',
+            'class'                 => 'form-control input-lg',
             'data-parsley-required' => 'true',
-            'data-parsley-type' => 'email'
+            'data-parsley-type'     => 'email',
+            'placeholder'           => 'Email'
         ));        
         
         $decorator = array(
                             'ViewHelper',
                             array('Description', array('class' => '')),
                             array('Errors', array('class'      => '')),
-                            array('Label', array('class'       => 'white-color', 'for' => 'email')),
                             array('HtmlTag', array('tag'     => 'div', 'class' => 'form-group')),
                     );
         $email->clearDecorators()->setDecorators($decorator);
         
         $password = $this->createElement('password', 'password', array(
             'label'                 => 'Password',
-            'class'                 => 'form-control',
+            'class'                 => 'form-control input-lg',
             'data-parsley-required' => 'true',
+            'placeholder'           => 'Password'
         ));
         $decorator = array(
                       'ViewHelper',
                       array('Description', array('class' => '')),
                       array('Errors', array('class'      => '')),
-                      array('Label', array('class'       => 'white-color', 'for' => 'password')),
                       array('HtmlTag', array('tag'     => 'div', 'class' => 'form-group')),
               );
         $password->clearDecorators()->setDecorators($decorator);

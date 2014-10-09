@@ -116,5 +116,18 @@ class Core_Row extends Zend_Db_Table_Row_Abstract {
   protected function _getListOfDepObjects($depClass, $refColumn = null, $select = null) {
     return $this->findDependentRowset($depClass . '_Table', $refColumn, $select);
   }
+  
+    public static function create($values, $tableName = false)
+    {
+        try {
+            $tableName = $tableName ? $tableName : get_called_class();
+            $object    = Core::createNewObject($tableName, $values);
+            $object->save();
+            return $object;
+        } catch (Exception $e) {
+            $translate = Zend_Registry::getInstance()->Zend_Translate;
+            throw new Exception("Could not create new object instance.");
+        }
+    }
 
 }

@@ -7,7 +7,7 @@
     }
     
     if (!defined('WEB_ROOT_PATH')){
-        define("WEB_ROOT_PATH","/home/matija/Desktop/Basket/public_html"); 
+        define("WEB_ROOT_PATH","/home/matija/Desktop/Basket"); 
     }
 
     if (!defined('ROOT_PATH')) {
@@ -22,6 +22,6 @@
         define("FB_APP_SECRET", "39d5d2bca4e62f7afd084a20d8c919af");
     }
     if (!defined('APP_URL')){
-        define("APP_URL","http://local.basket/public_html"); 
+        define("APP_URL","http://local.basket"); 
     }
     defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));?>

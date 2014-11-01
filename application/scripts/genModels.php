@@ -6,13 +6,12 @@
   ini_set('memory_limit', -1);
 
   require "bootstrap.php";
-  
+
   $dbAdapter = Zend_Registry::getInstance()->dbAdapter;
   $config = Zend_Registry::get('config');
   $config = $config->toArray();
   $dbName = $config['resources']['db']['params']['dbname'];
-  fb('tu je');
-  error_log('da');
+  
   if(isset($argv[1])){
     $tableName =$argv[1];
   } else {

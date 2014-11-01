@@ -18,7 +18,7 @@
                 <host>localhost</host>
                 <dbname>basket</dbname>
                 <username>root</username>
-                <password></password>
+                <password>yvdv217w</password>
                 <adapterNamespace>Zend_Db_Adapter</adapterNamespace>
                 </params>
                 <isDefaultTableAdapter>true</isDefaultTableAdapter>

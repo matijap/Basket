@@ -1,7 +1,7 @@
 FileETag None
 
 RewriteEngine on
-RewriteBase /public_html/
+RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]

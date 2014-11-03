@@ -15,7 +15,7 @@
             get_include_path(),
         )));
         
-error_log('dbc');
+
       /** Zend_Application */
       require_once 'Zend/Application.php';
       // Create application, bootstrap, and run     
@@ -23,9 +23,9 @@ error_log('dbc');
           APPLICATION_ENV,
           APPLICATION_PATH . '/configs/application.xml'
       );
-      error_log('aaa');
+
     require_once 'Basket/Acl.php';
-    error_log('bbb');
+
     /**
     * define a simple logging function
     * @todo why is this code here?
@@ -39,12 +39,11 @@ error_log('dbc');
       $logger->info($msg);
       error_log($msg);
     }
-    error_log('qqq');
+    
     $application->getBootstrap()->bootstrap('db');
     $application->bootstrap();
-    error_log('zzz');
+    
     if(!defined('APP_RUN')) {
-        error_log('opa');
         $application->run();
     }
-    error_log('qqqaa');
+    

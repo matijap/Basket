@@ -13,6 +13,7 @@ class LoginController extends Zend_Controller_Action
         if ($request->isPost()) {
             $isValid = $form->isValid($values);
             if ($isValid) {
+                fb('ovde');
                 User::login($values['email'], $values['password']);
                 $this->_redirect(APP_URL . '/basket');
 //                $result = User::login($values['email'], $values['password']);
@@ -46,11 +47,15 @@ class LoginController extends Zend_Controller_Action
         if ($request->isPost()) {
             $isValid = $form->isValid($values);
             if ($isValid) {
-                $userRole          = Role::getRootRole();
-                $values['role_id'] = $userRole['id'];
-                $user              = User::create($values);
-                $user              = $user->setToken();
-                $user->sendRegistrationMail();
+                $userRole           = Role::getRootRole();
+                $values['role_id']  = $userRole['id'];
+                $values['password'] = md5($values['password']);
+                $user               = User::create($values);
+                //$user              = $user->setToken();
+                //$user->sendRegistrationMail();
+                User::login($values['email'], $values['password']);
+                $this->_redirect(APP_URL . '/basket');
+                var_dump('da');
             } else {
                 
             }

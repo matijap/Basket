@@ -12,12 +12,12 @@ class User extends User_Row {
         //$user    = self::getUserByEmail($email);
         //if ($user->is_activated){
             if ($result->isValid()) {
-                fb('1');
+                fb('jeste auth');
                 $storage = $auth->getStorage();
                 $storage->write($adapter->getResultRowObject(array('email', 'password')));
                 return true;
             } else {
-                fb('2');
+                fb('nije auth');
                 return false;
             }
         //}
@@ -39,7 +39,6 @@ class User extends User_Row {
         $paswd = $params['encrypt'] ?
                  md5($params['password']) :
                  $params['password'];
-
 
         $authAdapter->setIdentity($uname);
         $authAdapter->setCredential($paswd);
